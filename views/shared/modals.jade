@@ -1,0 +1,28 @@
+div(class="modal fade" id="mainModal" tabindex="-1" role="dialog")
+  div(class="modal-dialog")
+    div(class="modal-content")
+      div(class="modal-header")
+        button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+            span(aria-hidden="true")
+        h4(class="modal-title") Отправить заявку
+      div(class="modal-body")
+        form(class="application-form" action="/leaveMessage" method="post")
+            div(class="form-group")
+                 label(for="Email") Адрес электронной почты
+                    span(class="red") *
+                 input(type="email" class="form-control" name="email" placeholder="Email" required)
+            div(class="form-group")
+                 label(for="Description") Описание работы
+                    span(class="red") *
+                 textarea(class="form-control" name="description" placeholder="Описание" required)
+            div(class="form-group")
+                label(for="from") Откуда вы о нас узнали
+                select(name="from" class="form-control" reuired)
+                    option(value="1") Рекомендация
+                    option(value="2") Поисковая система Яндекс
+                    option(value="3") Поисковая система Google
+                    option(value="4") Cоциальная сеть Вконтакте
+      div(class="modal-footer")
+        button(type="button" class="btn btn-default" data-dismiss="modal") Закрыть
+        button(type="button" id="send-form" onclick="$('.application-form').submit()" class="btn btn-primary") Отправить
+      

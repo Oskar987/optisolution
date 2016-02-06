@@ -1,0 +1,22 @@
+{
+  "name": "optimalSolution",
+  "description": "web site",
+  "main": "app.js",
+  "authors": [
+    "pasha <pavelkononenko1@gmail.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery-validation": "~1.14.0"
+  }
+}

@@ -1,0 +1,32 @@
+extends layout
+
+block content
+    div(class="container")
+        div(class="row")
+            div(class="col-xs-6 col-sm-6 col-md-6 col-lg-6")
+                span Наш телефон: 8-499-390-70-94
+                br
+                span Наш адрес: г.Москва, ММДЦ "Москва-сити", Пресненская набережная 6 с.2
+                div
+                    h5 Оставить заявку
+                    form
+                        div(class="form-group")
+                             label(for="Email") Адрес электронной почты
+                             input(type="email" class="form-control" id="Email" placeholder="Email")
+                        div(class="form-group")
+                             label(for="Description") Описание работы
+                             textarea(class="form-control" id="Description" placeholder="Описание")
+                        div(class="form-group")
+                            label(for="know") Откуда вы о нас узнали
+                            select(name="know" class="form-control")
+                                option(value="1") Рекомендация
+                                option(value="2") Поисковая система Яндекс
+                                option(value="3") Поисковая система Google
+                                option(value="4") Cоциальная сеть Вконтакте
+                        
+                        button(type="submit" class="btn btn-warning") Отправить
+                    
+            div(class="col-xs-6 col-sm-6 col-md-6 col-lg-6")
+                script(type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=0m2tmKHvsnzY1kv4hicqXHwWDlQ60cZg&width=400&height=400&lang=ru_RU&sourceType=constructor")
+            
+        

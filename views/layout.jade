@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    meta(charset='utf=8')
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(href="stylesheets/bootstrap.css", rel="stylesheet")
+    link(href="stylesheets/bootstrap-theme.css", rel="stylesheet")
+    link(href='stylesheets/style.css', rel='stylesheet', type='text/css')
+    
+  body
+    include ../views/shared/header.jade
+    block content
+    include ../views/shared/footer.jade
+    include ../views/shared/modals.jade
+    include ../views/shared/scripts.jade
