@@ -9,16 +9,18 @@ block content
                 span Наш адрес: г.Москва, ММДЦ "Москва-сити", Пресненская набережная 6 с.2
                 div
                     h5 Оставить заявку
-                    form
+                    form(class="application-form" action="/leaveMessage" method="post")
                         div(class="form-group")
-                             label(for="Email") Адрес электронной почты
-                             input(type="email" class="form-control" id="Email" placeholder="Email")
+                            label(for="Email") Адрес электронной почты
+                                span(class="red") *
+                             input(type="email" class="form-control" name="email" placeholder="Email" required)
                         div(class="form-group")
                              label(for="Description") Описание работы
-                             textarea(class="form-control" id="Description" placeholder="Описание")
+                                span(class="red") *
+                             textarea(class="form-control" name="description" placeholder="Описание" required)
                         div(class="form-group")
-                            label(for="know") Откуда вы о нас узнали
-                            select(name="know" class="form-control")
+                            label(for="from") Откуда вы о нас узнали
+                            select(name="from" class="form-control" reuired)
                                 option(value="1") Рекомендация
                                 option(value="2") Поисковая система Яндекс
                                 option(value="3") Поисковая система Google

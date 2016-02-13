@@ -10,6 +10,7 @@ var about = require('./routes/about');
 var contacts = require('./routes/contacts');
 var prices = require('./routes/prices');
 var reviews = require('./routes/reviews');
+var leaveMessage = require('./routes/leaveMessage');
 
 
 var app = express();
@@ -31,12 +32,7 @@ app.use('/', about);
 app.use('/', contacts);
 app.use('/', prices);
 app.use('/', reviews);
-
-//post request handlers
-app.post('/leaveMessage', function(req, res) {
-    res.send(JSON.stringify(req.body));
-});
-
+app.use('/', leaveMessage);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

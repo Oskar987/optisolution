@@ -32,8 +32,8 @@
 .city{
 	
 }
-.error{
-    border:1px solid red;
+.red{
+    color: red;
 }
 .center{
 	text-align: center;
