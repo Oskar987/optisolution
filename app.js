@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var mongoose = require('mongoose');
 
 var index = require('./routes/index');
 var about = require('./routes/about');
@@ -33,6 +34,8 @@ app.use('/', contacts);
 app.use('/', prices);
 app.use('/', reviews);
 app.use('/', leaveMessage);
+
+var db = mongoose.connect('mongodb://localhost/optis');
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
